@@ -1,0 +1,10 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: ftapp
+    password: ftapp
+    driver-class-name: oracle.jdbc.driver.OracleDriver

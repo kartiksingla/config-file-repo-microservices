@@ -1,0 +1,35 @@
+server:
+  port: 8081
+zuul:
+  ignored-services: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+  routes:
+    auth-service:
+      path: /uaa/**
+      url: auth-service
+      strip-prefix: false
+      sensitive-headers: Cookie, Set-Cookie
+    account-service:
+      path: /accounts/**
+      service-id: account-service
+      url: account-service
+      strip-prefix: false
+      
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+        isolation:
+          thread:
+            timeoutInMilliseconds: 600000        
+ribbon:
+  read-timeout: 99000
+  connection-timeout: 99000 

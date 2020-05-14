@@ -1,0 +1,19 @@
+server:
+  port: 8902
+  servlet:
+    context-path: /accounts
+
+feign:
+  hystrix:
+    enabled: false
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      client-id: account-service
+      client-secret: 1234
+      access-token-uri: http://localhost:8082/uaa/oauth/token
+      grant-type: client_credentials
+      scope: server
