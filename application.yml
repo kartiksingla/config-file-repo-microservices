@@ -3,7 +3,7 @@ eureka:
     prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: https://naming-server-first.herokuapp.com/eureka/
+      defaultZone: https://admin:naming-server-eureka@naming-server-first.herokuapp.com/eureka/
 
 security:
   oauth2:
