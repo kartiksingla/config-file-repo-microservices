@@ -1,6 +1,7 @@
 eureka:
   instance:
-    hostname: ${APP_NAME:spring.application.name}.herokuapp.com
+    hostname: ${APP_NAME}.herokuapp.com
+    nonSecurePort: 80
     prefer-ip-address: false
   client:
     serviceUrl:
