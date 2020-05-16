@@ -1,6 +1,7 @@
 eureka:
   instance:
-    prefer-ip-address: true
+    hostname: ${APP_NAME:spring.application.name}.herokuapp.com
+    prefer-ip-address: false
   client:
     serviceUrl:
       defaultZone: ${EUREKA_SVR_URL:https://admin:naming-server-eureka@naming-server-first.herokuapp.com}/eureka/
