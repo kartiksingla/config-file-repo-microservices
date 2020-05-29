@@ -1,0 +1,21 @@
+spring:
+ # Postgres
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://ec2-35-169-254-43.compute-1.amazonaws.com:5432/d50l8nts7holac
+    username: hlgwnjorgtwsiu
+    password: ${DB_PASSWORD}
+ # Oracle
+ # jpa:
+ #   show-sql: true
+ #   hibernate:
+ #     ddl-auto: update
+ # datasource:
+ #   url: jdbc:oracle:thin:@localhost:1521:xe
+ #   username: ftapp
+ #   password: ftapp
+ #   driver-class-name: oracle.jdbc.driver.OracleDriver
