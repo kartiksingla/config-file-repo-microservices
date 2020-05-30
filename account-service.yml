@@ -14,6 +14,6 @@ security:
     client:
       client-id: account-service
       client-secret: 1234
-      access-token-uri: http://auth-service/uaa/oauth/token
+      access-token-uri: ${AUTH_SERVICE_URL:https://auth-service-first.herokuapp.com/uaa/oauth/token}
       grant-type: client_credentials
       scope: server
